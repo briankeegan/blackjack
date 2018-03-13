@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(63, 75, 120);
+  background-image: url("../pics/blackjack/blue_felt2.jpg");
+}
+#status h1 {
+  color: white;
+  /*text-decoration: underline;*/
+  text-align: center;
+}
+#dealer, #player {
+  text-align: center;
+  color: white;
+}
+#dealersCards, #playersCards {
+  text-align: center;
+  min-height: 12em;
+}
+
+.card {
+  height: auto;
+  width: 8em;
+}
+
+#hit, #stay, #doubleDown {
+  display: none;
+}
+
+.row {
+  margin:0;
+  padding:0;
+  overflow:hidden;
+}
+
+.col1 {
+  float:left;
+	width:33.3333333333334%;
+}
+.col1 p{
+  text-align: left;
+  padding-left: 2em;
+  line-height: .5em;
+}
+ .col1 h2 {
+  text-align: left;
+  padding-left: 2em;
+ }
+.col2 {
+  float:left;
+	width:33.3333333333334%;;
+}
+.col3 {
+  float:left;
+	width:33.3333333333334%;
+  text-align: right;
+  /*margin-right: 2em;*/
+}
+.col3 select {
+  /*width: 6em;*/
+}
+.col3 input[type="number"] {
+  width: 4em;
+}
+#bet {
+  border: none;
+}

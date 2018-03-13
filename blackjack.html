@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Black Jack</title>
+	<meta charset="UTF-8f" />
+	<meta name="author" content="Brian Keegan">
+  <link rel="stylesheet" href="css/blackjack.css">
+</head>
+<body>
+<div id="dealer">
+	<h2>Dealer</h2>
+	<div class="row">
+
+		<div class="col1">
+			<p>Cards in shoe: <span id="cardsInDeck">52</span></p>
+			<p>Cards dealt: <span id="cardsDealt">0</span></p>
+			<p>Dealer shows: <span id="dealersPoints">0</span></p>
+			<p>Player shows: <span id="playersPoints">0</span></p>
+			<p>Won: <span id="won">0</span> Lost: <span id="lost">0</span></p>
+			<p>Pushed: <span id="pushed">0</span> Played: <span id="played">0</span></p>
+			<p>Busts: <span id="busts">0</span> Blackjacks: <span id="blackjacks">0</span></p>
+		</div>
+		<div class="col2">
+			<img class="card" src="pics\blackjack\deck.jpg" alt="deck">
+		</div>
+		<div class="col3">
+			<label for="numberDecks">Number of Decks:</label>
+			<select id="numberDecks" name="numberDecks">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="4">4</option>
+				<option value="6">6</option>
+				<option value="8">8</option>
+			</select>
+
+			<br>
+			<label for="onBlackjack">Blackjack wins:</label>
+			<select id="onBlackjack" name="onBlackjack">
+				<option value="1">1:1</option>
+				<option value="1.2">6:5</option>
+				<option value="1.5" selected>3:2</option>
+			</select>
+
+			<br>
+			<label for="hitSoft">Dealer hits on soft 17:</label>
+			<input type="checkbox" name="hitSoft" id="hitSoft" checked>
+
+			<br>
+			<label for="doubleFalse">
+				 Double down disabled
+				<input class="doubleEnabled" type="radio" name="double" id="doubleFalse" value="false">
+			</label>
+			<br>
+			<label for="douableTrue">
+ 				Enable double down
+				<input class="doubleEnabled" type="radio" name="double" id="douableTrue" value="true" checked>
+			</label>
+
+
+		</div>
+	</div>
+</div>
+<div id="dealersCards">
+</div>
+<div id="status">
+	<h1>Place your bets!</h1>
+</div>
+<div id="player">
+	<div class="row">
+		<div class="col1">
+			<h2>Number of chips: <span id="chips">1000</span></h2>
+		</div>
+		<div class="col2">
+
+			<h2>Player</h2>
+			<button type="button" id="dealHand" onclick="dealHand()">Deal New Hand</button>
+			<button type="button" id="hit" onclick="hit()">Hit</button>
+			<button type="button" id="stay" onclick="stay()">Stay</button>
+			<button type="button" id="doubleDown" onclick="doubleDown()">Double Down</button>
+
+		</div>
+		<div class="col3">
+
+				<fieldset id="bet">
+					<!-- oninput="betAmount.value = +betSlider.value;" -->
+					<label for="betAmount">Bet ammount:</label>
+					<input type="range" name="betSlider" id="betSlider" value="0" max="1000" min="0">
+					<input type="number" name="betAmount" id="betAmount" value="0" max="1000" min="0">
+				</fieldset>
+		</div>
+</div>
+	<div id="playersCards">
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="js/blackjack.js"></script>
+</body>
+</html>
